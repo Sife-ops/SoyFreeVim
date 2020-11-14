@@ -1,0 +1,1 @@
+Plug 'mcchrish/nnn.vim'
