@@ -36,6 +36,5 @@ autocmd BufWritePost *xmonad.hs !xmonad --recompile && xmonad --restart
 " Compile groff_mm documents
  autocmd BufWritePost *.mm !groff -mm -Tps % > %:p:h/groffout.ps
 
-" Autorefresh websites while editing
-" autocmd BufReadPre *nginx/*index.html !sed -i '2i<meta http-equiv="refresh" content="3">' %
-" autocmd ExitPre *nginx/*index.html !sed -i '/<meta http-equiv="refresh" content="3">/d' %
+" Automatically compile latex
+autocmd BufWritePost *.tex !pdflatex %

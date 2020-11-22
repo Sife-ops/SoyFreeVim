@@ -25,6 +25,6 @@ set cmdheight=1                         " Hide the bar!
 set path+=**                            " Search for files recursively
 set wildmenu                            " Enhanced command-line completion
 set autochdir                           " Change vim's pwd to that of buffer
-set formatoptions+=w                    " Prevents joining lines shorter than 80 characters
-set tw=80                               " Set textwidth to 80 characters
+" set formatoptions+=w                    " Prevents joining lines shorter than 80 characters
+" set tw=80                               " Set textwidth to 80 characters
 filetype indent plugin on               " Filetype-specific plugins and indents
