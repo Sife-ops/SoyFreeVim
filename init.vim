@@ -22,4 +22,4 @@
 " 53-vimplug-settings-coc.vim
 " 53-vimplug-settings.vim
 
-runtime! init.d/*.vim
+runtime! plugin/*.vim
