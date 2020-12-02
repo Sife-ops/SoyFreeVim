@@ -2,9 +2,9 @@
 " $ python3 -m --user pynvim
 " $ pacman -S npm
 
-let g:sife_init_d = "~/.config/nvim/init.d"
+let s:plugins = "~/.config/nvim/plugin"
 
-if filereadable(expand(glob(g:sife_init_d."/*-coc.vim")))
+if filereadable(expand(glob(s:plugins."/*-coc.vim")))
     " Extensions
     " github: https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
     " coc marketplace: https://github.com/fannheyward/coc-marketplace
@@ -25,7 +25,7 @@ if filereadable(expand(glob(g:sife_init_d."/*-coc.vim")))
     " Language servers
     " https://github.com/neoclide/coc.nvim/wiki/Language-servers
     " npm i -g bash-language-server
-    " if filereadable(expand(glob(g:sife_init_d."/*-vimplug-LanguageClient-neovim.vim")))
+    " if filereadable(expand(glob(s:plugins."/*-vimplug-LanguageClient-neovim.vim")))
     "     let g:LanguageClient_serverCommands = {
     "         \ 'sh': ['bash-language-server', 'start']
     "         \ }
