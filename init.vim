@@ -1,6 +1,11 @@
-"
-" Sife's fully modular init.vim
-"
+"     ____                _____               __     ___           
+"    / ___|  ___  _   _  |  ___| __ ___  ___  \ \   / (_)_ __ ___  
+"    \___ \ / _ \| | | | | |_ | '__/ _ \/ _ \  \ \ / /| | '_ ` _ \ 
+"     ___) | (_) | |_| | |  _|| | |  __/  __/   \ V / | | | | | | |
+"    |____/ \___/ \__, | |_|  |_|  \___|\___|    \_/  |_|_| |_| |_|
+"                 |___/                                            
+
+"""---- INSTRUCTIONS -----------------------------------------------------------
 
 " To enable modules, create links from modules/ to init.d/ like this:
 "
@@ -22,4 +27,10 @@
 " 53-vimplug-settings-coc.vim
 " 53-vimplug-settings.vim
 
+""
+
+"""
 runtime! plugin/*.vim
+""
+
+" vim: fdm=marker fmr=""",""
