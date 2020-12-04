@@ -9,6 +9,7 @@ inoremap ZZ <esc>:wq<cr>
 inoremap cc <esc>cc
 inoremap ii <esc>magg=G`ai
 inoremap jk <esc>
+inoremap kk <esc>/<++><cr>cgn
 nnoremap <leader>; :Commentary<cr>j
 nnoremap <leader>b m0i<cr><esc>`0
 nnoremap <leader>d ddO
