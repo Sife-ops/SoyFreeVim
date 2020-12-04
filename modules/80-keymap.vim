@@ -21,9 +21,12 @@ nnoremap <leader>o m0o<esc>`0
 nnoremap <leader>p :call Sife_select_paragraph()<cr>
 nnoremap <leader>r :%s/
 nnoremap <leader>so :source ~/.config/nvim/init.vim<cr>
+nnoremap <leader>tl WviWldBhpl
+nnoremap <leader>th viWldBhpB
 nnoremap <leader>w :w<cr>
 nnoremap <leader>xc :wqa<cr>
-nnoremap <silent><leader>t :call \ fzf#run(fzf#wrap({'source': 'find ./ -type f', 'options': '--preview="head -n 50 {}"'}))<cr>
+nnoremap <silent><leader>t :call 
+    \ fzf#run(fzf#wrap({'source': 'find ./ -type f', 'options': '--preview="head -n 50 {}"'}))<cr>
 nnoremap L zc
 
 " windows/navigation
