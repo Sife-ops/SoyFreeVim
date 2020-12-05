@@ -1,3 +1,9 @@
+" java 
+augroup filetype_java
+    autocmd!
+    autocmd FileType java setlocal foldmethod=marker foldmarker={,}
+augroup END
+
 " vimscript
 augroup filetype_vim
     autocmd!
@@ -5,8 +11,8 @@ augroup filetype_vim
         \ foldexpr=getline(v:lnum)=~'^$'&&getline(v:lnum+1)=~'\\S'?'<1':1
 augroup END
 
-" java 
-augroup filetype_java
+" json 
+augroup filetype_json
     autocmd!
-    autocmd FileType java setlocal foldmethod=marker foldmarker={,}
+    autocmd FileType json setlocal foldmethod=marker foldmarker={,},
 augroup END
