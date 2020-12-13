@@ -52,13 +52,4 @@ augroup filetype_java
 augroup END
 "$
 
-"^ shell
-augroup filetype_shell
-    autocmd!
-    inoremap $$ $()<esc>i
-    inoremap if if [  <esc>m0i ]; then<cr><++><cr>fi<esc>`0i
-    inoremap case case  <esc>m0i in<cr><++>) <++> ;;<cr>esac<esc>`0i
-augroup END
-"$
-
 " vim: fdm=marker fmr="^,"$
