@@ -3,25 +3,31 @@ nnoremap L zc
 "$
 
 "^ insert
+inoremap "jj ""<++><esc>F"i
+inoremap 'jj ''<++><esc>F'i
+inoremap (jj ()<++><esc>F)i
 inoremap <C-b> <esc>m0a<cr><esc>`0a
 inoremap <C-k> <esc>lC
 inoremap <C-o> <esc>m0o<esc>`0a
+inoremap <jj <><++><esc>F>i
 inoremap ZZ <esc>:wq<cr>
-inoremap cc <esc>cc
-inoremap ii <esc>magg=G`ai
+inoremap [jj []<++><esc>F]i
+inoremap jj <esc>:call SifeInsertSkeleton()<cr>
 inoremap jk <esc>
 inoremap kk <esc>/<++><cr>cgn
+inoremap {jj {}<++><esc>F}i
 "$
 
 "^ leader
-let mapleader = " " 
+let mapleader = " "
 nnoremap <leader>& :tabclose<cr>
 nnoremap <leader>; :Commentary<cr>j
 nnoremap <leader>[ :tabprev<cr>
-nnoremap <leader>] :tabnext<cr> 
+nnoremap <leader>] :tabnext<cr>
 nnoremap <leader>b m0i<cr><esc>`0
 nnoremap <leader>c :tabnew<cr>
 nnoremap <leader>g :%g/
+nnoremap <leader>i m0=ip`0
 nnoremap <leader>% :split<CR>
 nnoremap <leader>" :vsplit<CR>
 nnoremap <leader>mch :set cursorline! cursorcolumn!<cr>
