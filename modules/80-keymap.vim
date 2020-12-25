@@ -3,19 +3,19 @@ nnoremap L zc
 "$
 
 "^ insert
-inoremap "jj ""<++><esc>F"i
-inoremap 'jj ''<++><esc>F'i
-inoremap (jj ()<++><esc>F)i
+inoremap "" ""<++><esc>F"i
+inoremap '' ''<++><esc>F'i
+inoremap () ()<++><esc>F)i
 inoremap <C-b> <esc>m0a<cr><esc>`0a
 inoremap <C-k> <esc>lC
 inoremap <C-o> <esc>m0o<esc>`0a
-inoremap <jj <><++><esc>F>i
+inoremap <> <><++><esc>F>i
 inoremap ZZ <esc>:wq<cr>
-inoremap [jj []<++><esc>F]i
+inoremap [] []<++><esc>F]i
 inoremap jj <esc>:call SifeInsertSkeleton()<cr>
 inoremap jk <esc>
 inoremap kk <esc>/<++><cr>cgn
-inoremap {jj {}<++><esc>F}i
+inoremap {} {}<++><esc>F}i
 "$
 
 "^ leader
