@@ -1,5 +1,5 @@
 set encoding=utf-8                      " Character encoding
-set clipboard=unnamedplus               " Enable system clipboard register
+set clipboard+=unnamedplus              " Enable system clipboard register
 set go=a                                " Enable system selection register
 set mouse=a                             " Enable mouse
 set noerrorbells                        " Disable error bells
