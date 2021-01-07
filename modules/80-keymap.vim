@@ -1,6 +1,4 @@
-"^ normal
-nnoremap L zc
-"$
+let mapleader = " "
 
 "^ insert
 inoremap "" ""<++><esc>F"i
@@ -19,10 +17,10 @@ inoremap kk <esc>/<++><cr>cgn
 inoremap {{ <esc>A {<cr>}<esc>O
 inoremap {} {}<++><esc>F}i
 inoremap }} <esc>/}<cr>o<cr>
+inoremap modeline vim: ft= fdm= fmr=
 "$
 
-"^ leader
-let mapleader = " "
+"^ normal
 nnoremap <leader>" :vsplit<CR>
 nnoremap <leader>% :split<CR>
 nnoremap <leader>& :tabclose<cr>
@@ -49,6 +47,10 @@ nnoremap <leader>tl WviWldBhpl
 nnoremap <leader>w :w<cr>
 nnoremap <leader>x :wincmd q<cr>
 nnoremap <leader>z :wqa!<cr>
+nnoremap L zc
+"$
+
+"^ visual
 vnoremap <leader>r :!rev<cr>
 vnoremap <leader>s :sort<cr>
 vnoremap <leader>y :w! $CLIPBOARD<cr>
