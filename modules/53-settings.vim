@@ -1,5 +1,15 @@
 let s:plugins = "~/.config/nvim/plugin"
 
+if filereadable(expand(glob(s:plugins."/*-completion-nvim.vim")))
+    set completeopt=menuone,noinsert,noselect
+    set shortmess+=c
+    let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+endif
+
+if filereadable(expand(glob(s:plugins."/*-nvim-lspconfig.vim")))
+    lua require'lspconfig'.clangd.setup{ on_attach=require'completion'.on_attach }
+endif
+
 if filereadable(expand(glob(s:plugins."/*-gruvbox.vim")))
     colorscheme gruvbox
     set background=dark
