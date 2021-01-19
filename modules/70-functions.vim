@@ -1,9 +1,9 @@
 function! SifeCheatSheet()
-    " search cheat sheet repositories
+    " Search cheat sheet repositories.
     let l:terms = join(split(input('cht.sh: '), " "), "+")
-    silent execute "!curl cht.sh/" . &ft . "/" . l:terms . " > ${CLIPBOARD:-/tmp/clipboard-$(id -un)}"
+    silent execute "!curl cht.sh/" . &ft . "/" . l:terms . " > /tmp/cht.sh-$(id -un)"
     execute "split"
-    execute "term cat ${CLIPBOARD:-/tmp/clipboard-$(id -un)}"
+    execute "term cat /tmp/cht.sh-$(id -un)"
 endfunction
 
 function! SifeInsertSkeleton()
