@@ -1,23 +1,29 @@
+"^ leader
 let mapleader = " "
+nmap <bs> <space>
+"$
 
 "^ insert
 inoremap "" ""<++><esc>F"i
 inoremap '' ''<++><esc>F'i
 inoremap () ()<++><esc>F)i
+inoremap -- ->
 inoremap ;; <esc>A;<esc>o
 inoremap <> <><++><esc>F>i
 inoremap <C-b> <esc>m0a<cr><esc>`0a
 inoremap <C-k> <esc>lC
 inoremap <C-o> <esc>m0o<esc>`0a
+inoremap UU <esc>viWUEa
 inoremap ZZ <esc>:wq<cr>
 inoremap [] []<++><esc>F]i
 inoremap jj <esc>:call SifeInsertSkeleton()<cr>
 inoremap jk <esc>
 inoremap kk <esc>/<++><cr>cgn
+inoremap modeline vim: ft= fdm= fmr=
+inoremap uu <esc>viwUea
 inoremap {{ <esc>A {<cr>}<esc>O
 inoremap {} {}<++><esc>F}i
 inoremap }} <esc>/}<cr>o<cr>
-inoremap modeline vim: ft= fdm= fmr=
 "$
 
 "^ normal
@@ -26,6 +32,7 @@ nnoremap <leader>% :split<CR>
 nnoremap <leader>& :tabclose<cr>
 nnoremap <leader>; :Commentary<cr>j
 nnoremap <leader>P :-1read $CLIPBOARD<cr>
+nnoremap <leader>U m0viWU`0
 nnoremap <leader>[ :tabprev<cr>
 nnoremap <leader>] :tabnext<cr>
 nnoremap <leader>b m0i<cr><esc>`0
@@ -44,6 +51,7 @@ nnoremap <leader>sa ggVG
 nnoremap <leader>so :source ~/.config/nvim/init.vim<cr>
 nnoremap <leader>th viWldBhpB
 nnoremap <leader>tl WviWldBhpl
+nnoremap <leader>u m0viwU`0
 nnoremap <leader>w :w<cr>
 nnoremap <leader>x :wincmd q<cr>
 nnoremap <leader>z :wqa!<cr>
