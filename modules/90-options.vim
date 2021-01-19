@@ -24,4 +24,5 @@ set cmdheight=1                         " ex line height
 set path+=**                            " Search for files recursively
 set wildmenu                            " Enhanced command-line completion
 set tw=80                               " Set textwidth to 80 characters
+set iskeyword-=_                        " Treat camelcase as words
 filetype indent plugin on               " Filetype-specific plugins and indents
