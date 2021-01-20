@@ -64,4 +64,17 @@ vnoremap <leader>s :sort<cr>
 vnoremap <leader>y :w! $CLIPBOARD<cr>
 "$
 
+"^ F5
+augroup f5
+    autocmd! f5
+    autocmd BufRead *.ms nnoremap <F5> :!groff -ms -Tpdf % > %:p:h/groffout.pdf<cr>
+    autocmd BufRead *.tex nnoremap <F5> :!pdflatex %<cr>
+    autocmd BufRead *Xresources,*Xdefaults nnoremap <F5> :!xrdb %<cr>
+    autocmd BufRead *config.def.h nnoremap <F5> :!mv -f config.h config.h.old && sudo make clean install<cr>
+    autocmd BufRead *config.h nnoremap <F5> :!sudo make clean install<cr>
+    autocmd BufRead *polybar/config nnoremap <F5> :!pkill -USR1 -x polybar<cr>
+    autocmd BufRead *sxhkd/* nnoremap <F5> :!pkill -USR1 -x sxhkd<cr>
+augroup end
+"$
+
 " vim: fdm=marker fmr="^,"$
