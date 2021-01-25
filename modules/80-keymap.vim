@@ -1,29 +1,37 @@
+"^ todo:
+" create fold vmap
+" encapsulate imap
+"$
+
 "^ leader
 let mapleader = " "
 nmap <bs> <space>
+vmap <bs> <space>
 "$
 
 "^ insert
+" inoremap $(( $()<++><esc>F)i
+" inoremap ;; <esc>A;<esc>o
+" inoremap {{ <esc>A {<cr>}<esc>O
+" inoremap }} <esc>/}<cr>o<cr>
 inoremap "" ""<++><esc>F"i
 inoremap '' ''<++><esc>F'i
-inoremap () ()<++><esc>F)i
+inoremap (( ()<++><esc>F)i
 inoremap -- ->
-inoremap ;; <esc>A;<esc>o
-inoremap <> <><++><esc>F>i
+inoremap << <><++><esc>F>i
 inoremap <C-b> <esc>m0a<cr><esc>`0a
 inoremap <C-k> <esc>lC
 inoremap <C-o> <esc>m0o<esc>`0a
 inoremap UU <esc>viWUEa
 inoremap ZZ <esc>:wq<cr>
-inoremap [] []<++><esc>F]i
+inoremap [[ []<++><esc>F]i
+inoremap \(( \(\)<++><esc>F(a
 inoremap jj <esc>:call SifeInsertSkeleton()<cr>
 inoremap jk <esc>
 inoremap kk <esc>/<++><cr>cgn
 inoremap modeline vim: ft= fdm= fmr=
 inoremap uu <esc>viwUea
-inoremap {{ <esc>A {<cr>}<esc>O
-inoremap {} {}<++><esc>F}i
-inoremap }} <esc>/}<cr>o<cr>
+inoremap {{ {}<++><esc>F}i
 "$
 
 "^ normal
