@@ -75,6 +75,9 @@ vnoremap <leader>y :w! $CLIPBOARD<cr>
 "^ F5
 augroup f5
     autocmd! f5
+    autocmd BufRead *.c nnoremap <F5> :!gcc % && ./a.out<cr>
+    autocmd BufRead *.sh nnoremap <F5> :!./%<cr>
+    autocmd BufRead *.cpp nnoremap <F5> :!g++ % && ./a.out<cr>
     autocmd BufRead *.ms nnoremap <F5> :!groff -ms -Tpdf % > %:p:h/groffout.pdf<cr>
     autocmd BufRead *.tex nnoremap <F5> :!pdflatex %<cr>
     autocmd BufRead *Xresources,*Xdefaults nnoremap <F5> :!xrdb %<cr>
