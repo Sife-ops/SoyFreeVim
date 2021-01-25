@@ -88,4 +88,11 @@ augroup f5
 augroup end
 "$
 
+"^ F4
+augroup f4
+    autocmd! f4
+    autocmd BufRead *.sh nnoremap <f4> :!shellcheck %<cr>
+augroup end
+"$
+
 " vim: fdm=marker fmr="^,"$
