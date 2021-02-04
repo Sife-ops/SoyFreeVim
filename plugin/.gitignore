@@ -1,1 +1,10 @@
-*
+!50-begin.vim
+!51-gruvbox.vim
+!51-vim-commentary.vim
+!51-vim-surround.vim
+!52-end.vim
+!53-settings.vim
+!70-functions.vim
+!80-autocmd.vim
+!80-keymap.vim
+!90-options.vim
