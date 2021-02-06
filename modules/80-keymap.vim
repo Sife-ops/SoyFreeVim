@@ -15,9 +15,12 @@ vmap <bs> <space>
 " inoremap }} <esc>/}<cr>o<cr>
 inoremap "" <c-g>u""<++><esc>F"i
 inoremap $(( <c-g>u$()<++><esc>F)i
+inoremap &nu <c-g>u1>/dev/null 2>&1
 inoremap '' <c-g>u''<++><esc>F'i
 inoremap (( <c-g>u()<++><esc>F)i
 inoremap -- <c-g>u->
+inoremap 1nu <c-g>u1>/dev/null
+inoremap 2nu <c-g>u2>/dev/null
 inoremap << <c-g>u<><++><esc>F>i
 inoremap <C-b> <esc>m0a<cr><esc>`0a
 inoremap <C-k> <esc>lC
