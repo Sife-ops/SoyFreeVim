@@ -98,9 +98,11 @@ augroup f4
 augroup end
 "$
 
+"^ cpp
 augroup cpp
     autocmd! cpp
     autocmd BufRead *.cpp inoremap << <<
 augroup end
+"$
 
 " vim: fdm=marker fmr="^,"$
