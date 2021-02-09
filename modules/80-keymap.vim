@@ -46,7 +46,8 @@ nnoremap <leader>P :-1read $CLIPBOARD<cr>
 nnoremap <leader>U m0viWU`0
 nnoremap <leader>[ :tabprev<cr>
 nnoremap <leader>] :tabnext<cr>
-nnoremap <leader>b m0i<cr><esc>`0
+nnoremap <leader>B m0i<cr><esc>`0
+nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>c :tabnew<cr>
 nnoremap <leader>g :%g/
 nnoremap <leader>i m0=ip`0
@@ -60,8 +61,9 @@ nnoremap <leader>q :q!<cr>
 nnoremap <leader>r :%s/
 nnoremap <leader>sa ggVG
 nnoremap <leader>so :source ~/.config/nvim/init.vim<cr>
-nnoremap <leader>th viWldBhpB
-nnoremap <leader>tl WviWldBhpl
+" nnoremap <leader>th viWldBhpB
+" nnoremap <leader>tl WviWldBhpl
+nnoremap <leader>t :Tags<cr>
 nnoremap <leader>u m0viwU`0
 nnoremap <leader>w :w<cr>
 nnoremap <leader>x :wincmd q<cr>
