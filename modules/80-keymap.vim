@@ -38,15 +38,19 @@ inoremap {{ <c-g>u{}<++><esc>F}i
 "$
 
 "^ normal
+" nnoremap <leader>th viWldBhpB
+" nnoremap <leader>tl WviWldBhpl
+nnoremap <C-n> :bn<CR>
+nnoremap <C-p> :bp<CR>
 nnoremap <leader>" :vsplit<CR>
 nnoremap <leader>% :split<CR>
 nnoremap <leader>& :tabclose<cr>
 nnoremap <leader>; :Commentary<cr>j
+nnoremap <leader>B m0i<cr><esc>`0
 nnoremap <leader>P :-1read $CLIPBOARD<cr>
 nnoremap <leader>U m0viWU`0
 nnoremap <leader>[ :tabprev<cr>
 nnoremap <leader>] :tabnext<cr>
-nnoremap <leader>B m0i<cr><esc>`0
 nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>c :tabnew<cr>
 nnoremap <leader>g :%g/
@@ -61,8 +65,6 @@ nnoremap <leader>q :q!<cr>
 nnoremap <leader>r :%s/
 nnoremap <leader>sa ggVG
 nnoremap <leader>so :source ~/.config/nvim/init.vim<cr>
-" nnoremap <leader>th viWldBhpB
-" nnoremap <leader>tl WviWldBhpl
 nnoremap <leader>t :Tags<cr>
 nnoremap <leader>u m0viwU`0
 nnoremap <leader>w :w<cr>
