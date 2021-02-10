@@ -60,7 +60,7 @@ nnoremap <leader>mcs :call SifeCheatSheet()<cr>
 nnoremap <leader>mln :set number! relativenumber!<cr>
 nnoremap <leader>mwr :set wrap!<cr>
 nnoremap <leader>o m0o<esc>`0
-nnoremap <leader>p :read $CLIPBOARD<cr>
+nnoremap <leader>p :read ${CLIPBOARD}/00<cr>
 nnoremap <leader>q :q!<cr>
 nnoremap <leader>r :%s/
 nnoremap <leader>sa ggVG
