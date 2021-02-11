@@ -109,4 +109,12 @@ augroup cpp
 augroup end
 "$
 
+"^ sh
+augroup sh
+    autocmd! sh
+    autocmd BufRead *.sh nnoremap <leader>py :setf python<cr>
+    autocmd BufRead *.sh nnoremap <leader>sh :setf sh<cr>
+augroup end
+"$
+
 " vim: fdm=marker fmr="^,"$
