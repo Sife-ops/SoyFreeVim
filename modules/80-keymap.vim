@@ -38,22 +38,24 @@ inoremap {{ <c-g>u{}<++><esc>F}i
 "$
 
 "^ normal
+" nnoremap <leader>" :vsplit<CR>
+" nnoremap <leader>% :split<CR>
+" nnoremap <leader>& :tabclose<cr>
+" nnoremap <leader>[ :tabprev<cr>
+" nnoremap <leader>] :tabnext<cr>
+" nnoremap <leader>c :tabnew<cr>
+" nnoremap <leader>g :%g/
 " nnoremap <leader>th viWldBhpB
 " nnoremap <leader>tl WviWldBhpl
 nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
-nnoremap <leader>" :vsplit<CR>
-nnoremap <leader>% :split<CR>
-nnoremap <leader>& :tabclose<cr>
 nnoremap <leader>; :Commentary<cr>j
 nnoremap <leader>B m0i<cr><esc>`0
 nnoremap <leader>P :-1read $CLIPBOARD<cr>
 nnoremap <leader>U m0viWU`0
-nnoremap <leader>[ :tabprev<cr>
-nnoremap <leader>] :tabnext<cr>
 nnoremap <leader>b :Buffers<cr>
-nnoremap <leader>c :tabnew<cr>
-nnoremap <leader>g :%g/
+nnoremap <leader>co :copen<cr>
+nnoremap <leader>g :grep
 nnoremap <leader>i m0=ip`0
 nnoremap <leader>mch :set cursorline! cursorcolumn!<cr>
 nnoremap <leader>mcs :call SifeCheatSheet()<cr>
