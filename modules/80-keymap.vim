@@ -52,7 +52,7 @@ nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
 nnoremap <leader>; :Commentary<cr>j
 nnoremap <leader>B m0i<cr><esc>`0
-nnoremap <leader>P :-1read $CLIPBOARD<cr>
+nnoremap <leader>P :-1read ${CLIPBOARD}/00<cr>
 nnoremap <leader>U m0viWU`0
 nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>g :Rg<space>
