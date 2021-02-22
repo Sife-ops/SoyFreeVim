@@ -78,7 +78,7 @@ nnoremap L zc
 "^ visual
 vnoremap <leader>r :!rev<cr>
 vnoremap <leader>s :sort<cr>
-vnoremap <leader>y :w! $CLIPBOARD<cr>
+vnoremap <leader>y :w! ${CLIPBOARD}/00<cr>
 "$
 
 "^ F5
