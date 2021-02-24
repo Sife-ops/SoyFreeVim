@@ -25,6 +25,7 @@ inoremap << <c-g>u<><++><esc>F>i
 inoremap <C-b> <esc>m0a<cr><esc>`0a
 inoremap <C-k> <esc>lC
 inoremap <C-o> <esc>m0o<esc>`0a
+inoremap KK <c-g>u<cr><esc>/<++><cr>cgn<esc>O
 inoremap UU <esc>viWUEa
 inoremap ZZ <esc>:wq<cr>
 inoremap [[ <c-g>u[]<++><esc>F]i
