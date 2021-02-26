@@ -11,6 +11,7 @@ set laststatus=0                        " 0, 1 or 2; when to use a status line f
 set mouse=a                             " list of flags for using the mouse
 set nobackup                            " do not keep a backup after overwriting a file
 set noerrorbells                        " do not ring the bell
+set nohlsearch                          " do not highlight all matches for the last used search pattern
 set noswapfile                          " do not use a swap file for this buffer
 set nowrap                              " do not wrap long lines
 set path+=**                            " list of directory names used for file searching

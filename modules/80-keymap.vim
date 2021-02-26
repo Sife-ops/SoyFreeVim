@@ -1,8 +1,3 @@
-"^ todo:
-" create fold vmap
-" encapsulate imap
-"$
-
 "^ leader
 let mapleader = " "
 nmap <bs> <space>
@@ -10,22 +5,17 @@ vmap <bs> <space>
 "$
 
 "^ insert
-" inoremap ;; <esc>A;<esc>o
-" inoremap {{ <esc>A {<cr>}<esc>O
-" inoremap }} <esc>/}<cr>o<cr>
 inoremap "" <c-g>u""<++><esc>F"i
 inoremap $(( <c-g>u$()<++><esc>F)i
 inoremap &nu <c-g>u1>/dev/null 2>&1
 inoremap '' <c-g>u''<++><esc>F'i
 inoremap (( <c-g>u()<++><esc>F)i
-inoremap -- <c-g>u->
 inoremap 1nu <c-g>u1>/dev/null
 inoremap 2nu <c-g>u2>/dev/null
 inoremap << <c-g>u<><++><esc>F>i
 inoremap <C-b> <esc>m0a<cr><esc>`0a
 inoremap <C-k> <esc>lC
 inoremap <C-o> <esc>m0o<esc>`0a
-inoremap KK <c-g>u<cr><esc>/<++><cr>cgn<esc>O
 inoremap UU <esc>viWUEa
 inoremap ZZ <esc>:wq<cr>
 inoremap [[ <c-g>u[]<++><esc>F]i
@@ -36,19 +26,10 @@ inoremap kk <c-g>u<esc>/<++><cr>cgn
 inoremap modeline vim: ft= fdm= fmr=
 inoremap uu <esc>viwUea
 inoremap {{ <c-g>u{}<++><esc>F}i
+inoremap {{{ <c-g>u{<cr>}<esc>O
 "$
 
 "^ normal
-" nnoremap <leader>" :vsplit<CR>
-" nnoremap <leader>% :split<CR>
-" nnoremap <leader>& :tabclose<cr>
-" nnoremap <leader>[ :tabprev<cr>
-" nnoremap <leader>] :tabnext<cr>
-" nnoremap <leader>c :tabnew<cr>
-" nnoremap <leader>co :copen<cr>
-" nnoremap <leader>g :%g/
-" nnoremap <leader>th viWldBhpB
-" nnoremap <leader>tl WviWldBhpl
 nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
 nnoremap <leader>; :Commentary<cr>j
@@ -60,7 +41,9 @@ nnoremap <leader>g :Rg<space>
 nnoremap <leader>i m0=ip`0
 nnoremap <leader>mch :set cursorline! cursorcolumn!<cr>
 nnoremap <leader>mcs :call SifeCheatSheet()<cr>
+nnoremap <leader>mhl :set hlsearch!<cr>
 nnoremap <leader>mln :set number! relativenumber!<cr>
+nnoremap <leader>msn :set signcolumn=yes<cr>
 nnoremap <leader>mwr :set wrap!<cr>
 nnoremap <leader>o m0o<esc>`0
 nnoremap <leader>p :read ${CLIPBOARD}/00<cr>
@@ -85,12 +68,12 @@ vnoremap <leader>y :w! ${CLIPBOARD}/00<cr>
 "^ F5
 augroup f5
     autocmd! f5
-    autocmd BufRead *.c nnoremap <F5> :!gcc % && ./a.out<cr>
-    autocmd BufRead *.sh nnoremap <F5> :!./%<cr>
-    autocmd BufRead *.cpp nnoremap <F5> :!g++ % && ./a.out<cr>
-    autocmd BufRead *.ms nnoremap <F5> :!groff -ms -Tpdf % > %:p:h/groffout.pdf<cr>
-    autocmd BufRead *.tex nnoremap <F5> :!pdflatex %<cr>
-    autocmd BufRead *Xresources,*Xdefaults nnoremap <F5> :!xrdb %<cr>
+    autocmd FileType c nnoremap <F5> :!gcc % && ./a.out<cr>
+    autocmd FileType sh nnoremap <F5> :!./%<cr>
+    autocmd FileType cpp nnoremap <F5> :!g++ % && ./a.out<cr>
+    autocmd FileType ms nnoremap <F5> :!groff -ms -Tpdf % > %:p:h/groffout.pdf<cr>
+    autocmd FileType tex nnoremap <F5> :!pdflatex %<cr>
+    autocmd FileType xdefaults nnoremap <F5> :!xrdb %<cr>
     autocmd BufRead *config.def.h nnoremap <F5> :!mv -f config.h config.h.old && sudo make clean install<cr>
     autocmd BufRead *config.h nnoremap <F5> :!sudo make clean install<cr>
     autocmd BufRead *polybar/config nnoremap <F5> :!pkill -USR1 -x polybar<cr>
@@ -101,22 +84,23 @@ augroup end
 "^ F4
 augroup f4
     autocmd! f4
-    autocmd BufRead *.sh nnoremap <f4> :!shellcheck %<cr>
+    autocmd FileType sh nnoremap <f4> :!shellcheck %<cr>
 augroup end
 "$
 
-"^ cpp
+"^ c(++)
 augroup cpp
     autocmd! cpp
-    autocmd BufRead *.cpp inoremap << <<
+    autocmd FileType cpp inoremap << <<
+    autocmd FileType c,cpp inoremap -- <c-g>u->
 augroup end
 "$
 
 "^ sh
 augroup sh
     autocmd! sh
-    autocmd BufRead *.sh nnoremap <leader>py :setf python<cr>
-    autocmd BufRead *.sh nnoremap <leader>sh :setf sh<cr>
+    autocmd FileType sh nnoremap <leader>py :setf python<cr>
+    autocmd FileType sh nnoremap <leader>sh :setf sh<cr>
 augroup end
 "$
 
