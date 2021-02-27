@@ -3,7 +3,7 @@ set cmdheight=1                         " number of lines used for the command-l
 set colorcolumn=80                      " columns to highlight
 set encoding=utf-8                      " character encoding used in Vim: "latin1", "utf-8"
 set expandtab                           " expand <Tab> to spaces in Insert mode
-set exrc                                " enable reading .vimrc/.exrc/.gvimrc in the current directory
+" set exrc                                " enable reading .vimrc/.exrc/.gvimrc in the current directory, not secure
 set hidden                              " don't unload a buffer when no longer shown in a window
 set ignorecase                          " ignore case when using a search pattern
 set incsearch                           " show match for partly typed search command
