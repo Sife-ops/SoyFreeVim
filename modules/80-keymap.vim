@@ -53,7 +53,7 @@ nnoremap <leader>sa ggVG
 nnoremap <leader>so :source ~/.config/nvim/init.vim<cr>
 nnoremap <leader>t :Tags<cr>
 nnoremap <leader>u m0viwU`0
-nnoremap <leader>w :w<cr>
+nnoremap <leader>w :wa<cr>
 nnoremap <leader>x :wincmd q<cr>
 nnoremap <leader>z :wqa!<cr>
 nnoremap L zc
@@ -63,6 +63,18 @@ nnoremap L zc
 vnoremap <leader>r :!rev<cr>
 vnoremap <leader>s :sort<cr>
 vnoremap <leader>y :w! ${CLIPBOARD}/00<cr>
+"$
+
+"^ lsp
+nnoremap <silent> <c-]>     <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> K         <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> gD        <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> <leader>k <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> 1gD       <cmd>lua vim.lsp.buf.type_definition()<CR>
+nnoremap <silent> gr        <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> g0        <cmd>lua vim.lsp.buf.document_symbol()<CR>
+nnoremap <silent> gW        <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
+nnoremap <silent> gd        <cmd>lua vim.lsp.buf.declaration()<CR>
 "$
 
 "^ F5
