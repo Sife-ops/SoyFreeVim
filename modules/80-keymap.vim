@@ -30,6 +30,7 @@ inoremap {{{ <c-g>u{<cr>}<esc>O
 "$
 
 "^ normal
+" nnoremap <leader>i m0=ip`0
 nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
 nnoremap <leader>; :Commentary<cr>j
@@ -38,7 +39,7 @@ nnoremap <leader>P :-1read ${CLIPBOARD}/00<cr>
 nnoremap <leader>U m0viWU`0
 nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>g :Rg<space>
-nnoremap <leader>i m0=ip`0
+nnoremap <leader>i a<cr><esc>kddkPkJxJ
 nnoremap <leader>mch :set cursorline! cursorcolumn!<cr>
 nnoremap <leader>mcs :call SifeCheatSheet()<cr>
 nnoremap <leader>mhl :set hlsearch!<cr>
@@ -80,23 +81,23 @@ nnoremap <silent> gd        <cmd>lua vim.lsp.buf.declaration()<CR>
 "^ F5
 augroup f5
     autocmd! f5
-    autocmd FileType c nnoremap <F5> :!gcc % && ./a.out<cr>
-    autocmd FileType sh nnoremap <F5> :!./%<cr>
-    autocmd FileType cpp nnoremap <F5> :!g++ % && ./a.out<cr>
-    autocmd FileType ms nnoremap <F5> :!groff -ms -Tpdf % > %:p:h/groffout.pdf<cr>
-    autocmd FileType tex nnoremap <F5> :!pdflatex %<cr>
-    autocmd FileType xdefaults nnoremap <F5> :!xrdb %<cr>
-    autocmd BufRead *config.def.h nnoremap <F5> :!mv -f config.h config.h.old && sudo make clean install<cr>
-    autocmd BufRead *config.h nnoremap <F5> :!sudo make clean install<cr>
-    autocmd BufRead *polybar/config nnoremap <F5> :!pkill -USR1 -x polybar<cr>
-    autocmd BufRead *sxhkd/* nnoremap <F5> :!pkill -USR1 -x sxhkd<cr>
+    autocmd FileType c nnoremap <F5> :w<cr>:!gcc % && ./a.out<cr>
+    autocmd FileType sh nnoremap <F5> :w<cr>:!./%<cr>
+    autocmd FileType cpp nnoremap <F5> :w<cr>:!g++ % && ./a.out<cr>
+    autocmd FileType ms nnoremap <F5> :w<cr>:!groff -ms -Tpdf % > %:p:h/groffout.pdf<cr>
+    autocmd FileType tex nnoremap <F5> :w<cr>:!pdflatex %<cr>
+    autocmd FileType xdefaults nnoremap <F5> :w<cr>:!xrdb %<cr>
+    autocmd BufRead *config.def.h nnoremap <F5> :w<cr>:!mv -f config.h config.h.old && sudo make clean install<cr>
+    autocmd BufRead *config.h nnoremap <F5> :w<cr>:!sudo make clean install<cr>
+    autocmd BufRead *polybar/config nnoremap <F5> :w<cr>:!pkill -USR1 -x polybar<cr>
+    autocmd BufRead *sxhkd/* nnoremap <F5> :w<cr>:!pkill -USR1 -x sxhkd<cr>
 augroup end
 "$
 
 "^ F4
 augroup f4
     autocmd! f4
-    autocmd FileType sh nnoremap <f4> :!shellcheck %<cr>
+    autocmd FileType sh nnoremap <f4> :w<cr>:!shellcheck %<cr>
 augroup end
 "$
 
