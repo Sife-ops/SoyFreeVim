@@ -23,6 +23,7 @@ inoremap \(( <c-g>u\(\)<++><esc>F(a
 inoremap jj <esc>:call SifeInsertSkeleton()<cr>
 inoremap jk <esc>
 inoremap kk <c-g>u<esc>/<++><cr>cgn
+inoremap KK <c-g>u<esc>/<++><cr>Nhm0:s/<++>//g<cr>`0a
 inoremap modeline vim: ft= fdm= fmr=
 inoremap uu <esc>viwUea
 inoremap {{ <c-g>u{}<++><esc>F}i
