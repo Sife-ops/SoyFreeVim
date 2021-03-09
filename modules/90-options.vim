@@ -23,7 +23,7 @@ set softtabstop=4                       " if non-zero, number of spaces to inser
 set splitbelow splitright               " a new window is put below the current one to the right
 set tabstop=4                           " number of spaces a <Tab> in the text stands for
 set termguicolors                       " use GUI colors for the terminal
-set textwidth=80                        " line length above which to break a line
+" set textwidth=80                        " line length above which to break a line
 set undodir=~/.local/share/nvim/undo    " list of directories for undo files
 set undofile                            " automatically save and restore undo history
 set wildmenu                            " command-line completion shows a list of matches
