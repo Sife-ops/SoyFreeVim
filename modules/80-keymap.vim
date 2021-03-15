@@ -82,16 +82,17 @@ nnoremap <silent> gd        <cmd>lua vim.lsp.buf.declaration()<CR>
 "^ F5
 augroup f5
     autocmd! f5
-    autocmd FileType c nnoremap <F5> :w<cr>:!gcc % && ./a.out<cr>
-    autocmd FileType sh nnoremap <F5> :w<cr>:!./%<cr>
-    autocmd FileType cpp nnoremap <F5> :w<cr>:!g++ % && ./a.out<cr>
-    autocmd FileType ms nnoremap <F5> :w<cr>:!groff -ms -Tpdf % > %:p:h/groffout.pdf<cr>
-    autocmd FileType tex nnoremap <F5> :w<cr>:!pdflatex %<cr>
-    autocmd FileType xdefaults nnoremap <F5> :w<cr>:!xrdb %<cr>
     autocmd BufRead *config.def.h nnoremap <F5> :w<cr>:!mv -f config.h config.h.old && sudo make clean install<cr>
     autocmd BufRead *config.h nnoremap <F5> :w<cr>:!sudo make clean install<cr>
     autocmd BufRead *polybar/config nnoremap <F5> :w<cr>:!pkill -USR1 -x polybar<cr>
     autocmd BufRead *sxhkd/* nnoremap <F5> :w<cr>:!pkill -USR1 -x sxhkd<cr>
+    autocmd FileType c nnoremap <F5> :w<cr>:!gcc % && ./a.out<cr>
+    autocmd FileType cpp nnoremap <F5> :w<cr>:!g++ % && ./a.out<cr>
+    autocmd FileType go nnoremap <F5> :w<cr>:!go run %<cr>
+    autocmd FileType ms nnoremap <F5> :w<cr>:!groff -ms -Tpdf % > %:p:h/groffout.pdf<cr>
+    autocmd FileType sh nnoremap <F5> :w<cr>:!./%<cr>
+    autocmd FileType tex nnoremap <F5> :w<cr>:!pdflatex %<cr>
+    autocmd FileType xdefaults nnoremap <F5> :w<cr>:!xrdb %<cr>
 augroup end
 "$
 
