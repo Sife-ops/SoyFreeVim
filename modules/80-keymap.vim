@@ -111,6 +111,13 @@ augroup cpp
 augroup end
 "$
 
+"^ go
+augroup go
+    autocmd! go
+    autocmd FileType go inoremap :: :=
+augroup end
+"$
+
 "^ sh
 augroup sh
     autocmd! sh
