@@ -79,6 +79,13 @@ nnoremap <silent> gW        <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
 nnoremap <silent> gd        <cmd>lua vim.lsp.buf.declaration()<CR>
 "$
 
+"^ F4
+augroup f4
+    autocmd! f4
+    autocmd FileType sh nnoremap <f4> :w<cr>:!shellcheck %<cr>
+augroup end
+"$
+
 "^ F5
 augroup f5
     autocmd! f5
@@ -93,13 +100,6 @@ augroup f5
     autocmd FileType sh nnoremap <F5> :w<cr>:!./%<cr>
     autocmd FileType tex nnoremap <F5> :w<cr>:!pdflatex %<cr>
     autocmd FileType xdefaults nnoremap <F5> :w<cr>:!xrdb %<cr>
-augroup end
-"$
-
-"^ F4
-augroup f4
-    autocmd! f4
-    autocmd FileType sh nnoremap <f4> :w<cr>:!shellcheck %<cr>
 augroup end
 "$
 
