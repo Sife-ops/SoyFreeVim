@@ -16,14 +16,15 @@ inoremap << <c-g>u<><++><esc>F>i
 inoremap <C-b> <esc>m0a<cr><esc>`0a
 inoremap <C-k> <esc>lC
 inoremap <C-o> <esc>m0o<esc>`0a
+inoremap KK <c-g>u<esc>/<++><cr>Nhm0:s/<++>//g<cr>`0a
 inoremap UU <esc>viWUEa
 inoremap ZZ <esc>:wq<cr>
 inoremap [[ <c-g>u[]<++><esc>F]i
 inoremap \(( <c-g>u\(\)<++><esc>F(a
+inoremap docstr /*<cr>*<cr>*/<esc>=2kjA<space>
 inoremap jj <esc>:call SifeInsertSkeleton()<cr>
 inoremap jk <esc>
 inoremap kk <c-g>u<esc>/<++><cr>cgn
-inoremap KK <c-g>u<esc>/<++><cr>Nhm0:s/<++>//g<cr>`0a
 inoremap modeline vim: ft= fdm= fmr=
 inoremap uu <esc>viwUea
 inoremap {{ <c-g>u{}<++><esc>F}i
