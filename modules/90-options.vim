@@ -27,7 +27,7 @@ set termguicolors                       " use GUI colors for the terminal
 set undodir=~/.local/share/nvim/undo    " list of directories for undo files
 set undofile                            " automatically save and restore undo history
 set wildmenu                            " command-line completion shows a list of matches
-
+set cursorline cursorcolumn             " highlight the screen line of the cursor
 " set go=a                                " ???
 
 filetype indent plugin on               " Filetype-specific plugins and indents
