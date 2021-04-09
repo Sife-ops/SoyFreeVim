@@ -21,7 +21,7 @@ inoremap UU <esc>viWUEa
 inoremap ZZ <esc>:wq<cr>
 inoremap [[ <c-g>u[]<++><esc>F]i
 inoremap \(( <c-g>u\(\)<++><esc>F(a
-inoremap docstr /*<cr>*<cr>*/<esc>=2kjA<space>
+inoremap docstr /**<cr>*<cr>*/<esc>=2kjA<space>
 inoremap jj <esc>:call SifeInsertSkeleton()<cr>
 inoremap jk <esc>
 inoremap kk <c-g>u<esc>/<++><cr>cgn
