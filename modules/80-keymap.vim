@@ -63,6 +63,7 @@ nnoremap L zc
 "$
 
 "^ visual
+vnoremap <leader>@ :norm @q<cr>
 vnoremap <leader>r :!rev<cr>
 vnoremap <leader>s :sort<cr>
 vnoremap <leader>y :w! ${CLIPBOARD}/00<cr>
