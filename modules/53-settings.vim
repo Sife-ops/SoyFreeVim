@@ -10,6 +10,7 @@ if filereadable(expand(glob(s:plugins."/*-nvim-lspconfig.vim")))
     lua require'lspconfig'.bashls.setup{ on_attach=require'completion'.on_attach }
     lua require'lspconfig'.clangd.setup{ on_attach=require'completion'.on_attach }
     lua require'lspconfig'.gopls.setup{ on_attach=require'completion'.on_attach }
+    lua require'lspconfig'.denols.setup{ on_attach=require'completion'.on_attach }
 endif
 
 if filereadable(expand(glob(s:plugins."/*-gruvbox.vim")))
