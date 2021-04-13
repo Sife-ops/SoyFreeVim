@@ -6,10 +6,12 @@ vmap <bs> <space>
 
 "^ insert
 inoremap "" <c-g>u""<++><esc>F"i
+inoremap $$ <c-g>u<esc>A
 inoremap $(( <c-g>u$()<++><esc>F)i
 inoremap &nu <c-g>u1>/dev/null 2>&1
 inoremap '' <c-g>u''<++><esc>F'i
 inoremap (( <c-g>u()<++><esc>F)i
+inoremap ()) <c-g>u<esc>m0a<space>=><space><++><esc>`0a
 inoremap 1nu <c-g>u1>/dev/null
 inoremap 2nu <c-g>u2>/dev/null
 inoremap << <c-g>u<><++><esc>F>i
