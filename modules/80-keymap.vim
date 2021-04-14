@@ -16,7 +16,8 @@ inoremap 1nu <c-g>u1>/dev/null
 inoremap 2nu <c-g>u2>/dev/null
 inoremap << <c-g>u<><++><esc>F>i
 inoremap <C-b> <esc>m0a<cr><esc>`0a
-inoremap <C-k> <esc>lC
+inoremap <C-j> <esc>:call SifeInsertSkeleton()<cr>
+inoremap <C-k> <c-g>u<esc>/<++><cr>cgn
 inoremap <C-o> <esc>m0o<esc>`0a
 inoremap KK <c-g>u<esc>/<++><cr>Nhm0:s/<++>//g<cr>`0a
 inoremap UU <esc>viWUEa
@@ -24,9 +25,7 @@ inoremap ZZ <esc>:wq<cr>
 inoremap [[ <c-g>u[]<++><esc>F]i
 inoremap \(( <c-g>u\(\)<++><esc>F(a
 inoremap docstr /**<cr>*<cr>*/<esc>=2kjA<space>
-inoremap jj <esc>:call SifeInsertSkeleton()<cr>
 inoremap jk <esc>
-inoremap kk <c-g>u<esc>/<++><cr>cgn
 inoremap modeline vim: ft= fdm= fmr=
 inoremap uu <esc>viwUea
 inoremap {{ <c-g>u{}<++><esc>F}i
@@ -71,7 +70,7 @@ vnoremap <leader>s :sort<cr>
 vnoremap <leader>y :w! ${CLIPBOARD}/00<cr>
 "$
 
-"^ lsp
+"^ completion-nvim
 nnoremap <silent> <c-]>     <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> K         <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> gD        <cmd>lua vim.lsp.buf.implementation()<CR>
