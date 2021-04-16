@@ -99,6 +99,7 @@ augroup f5
     autocmd FileType c nnoremap <F5> :w<cr>:!gcc % && ./a.out<cr>
     autocmd FileType cpp nnoremap <F5> :w<cr>:!g++ % && ./a.out<cr>
     autocmd FileType go nnoremap <F5> :w<cr>:!go run %<cr>
+    autocmd FileType javascript nnoremap <F5> :w<cr>:!node %<cr>
     autocmd FileType ms nnoremap <F5> :w<cr>:!groff -ms -Tpdf % > %:p:h/groffout.pdf<cr>
     autocmd FileType sh nnoremap <F5> :w<cr>:!./%<cr>
     autocmd FileType tex nnoremap <F5> :w<cr>:!pdflatex %<cr>
