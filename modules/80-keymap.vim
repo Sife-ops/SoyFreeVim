@@ -16,7 +16,7 @@ inoremap 1nu <c-g>u1>/dev/null
 inoremap 2nu <c-g>u2>/dev/null
 inoremap << <c-g>u<><++><esc>F>i
 inoremap <C-b> <esc>m0a<cr><esc>`0a
-inoremap <C-j> <esc>:call SifeInsertSkeleton()<cr>
+inoremap <C-j> <esc>:call InsertSkeleton()<cr>
 inoremap <C-k> <c-g>u<esc>/<++><cr>cgn
 inoremap <C-o> <esc>m0o<esc>`0a
 inoremap KK <c-g>u<esc>/<++><cr>Nhm0:s/<++>//g<cr>`0a
@@ -44,7 +44,7 @@ nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>g :Rg<space>
 nnoremap <leader>i a<cr><esc>kddkPkJxJ
 nnoremap <leader>mch :set cursorline! cursorcolumn!<cr>
-nnoremap <leader>mcs :call SifeCheatSheet()<cr>
+nnoremap <leader>mcs :call CheatSheet()<cr>
 nnoremap <leader>mhl :set hlsearch!<cr>
 nnoremap <leader>mln :set number! relativenumber!<cr>
 nnoremap <leader>msn :set signcolumn=yes<cr>
